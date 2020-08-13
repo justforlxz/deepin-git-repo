@@ -41,7 +41,7 @@ prepare() {
 build() {
   cd dde-file-manager
   qmake-qt5 PREFIX=/usr
-  make
+  make -j$(nproc)
 }
 
 package() {
