@@ -24,7 +24,7 @@ pkgver() {
 build() {
   cd dtkgui
   qmake-qt5 PREFIX=/usr DTK_VERSION=$pkgver LIB_INSTALL_DIR=/usr/lib
-  make
+  make -j$(nproc)
 }
 
 package() {
