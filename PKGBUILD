@@ -36,7 +36,7 @@ prepare() {
 build() {
   cd dde-session-ui
   qmake-qt5 PREFIX=/usr
-  make
+  make -j$(nproc)
 }
 
 package() {
