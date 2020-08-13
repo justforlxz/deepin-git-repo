@@ -30,7 +30,7 @@ prepare() {
 build() {
   cd dtkwidget
   qmake-qt5 PREFIX=/usr
-  make
+  make -j$(nproc)
 }
 
 package() {
