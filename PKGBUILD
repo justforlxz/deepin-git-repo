@@ -25,7 +25,7 @@ pkgver() {
 build() {
   cd dde-qt-dbus-factory
   qmake-qt5 PREFIX=/usr
-  make
+  make -j$(nproc)
 }
 
 package() {
