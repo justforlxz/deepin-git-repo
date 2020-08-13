@@ -30,7 +30,7 @@ prepare() {
 build() {
   cd dde-polkit-agent
   qmake-qt5 PREFIX=/usr
-  make
+  make -j$(nproc)
 }
 
 package() {
