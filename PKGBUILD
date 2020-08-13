@@ -24,7 +24,7 @@ pkgver() {
 build() {
   cd qt5integration
   qmake-qt5 PREFIX=/usr
-  make
+  make -j$(nproc)
 }
 
 package() {
