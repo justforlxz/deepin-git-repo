@@ -38,7 +38,7 @@ prepare() {
 build() {
   cd qt5platform-plugins
   qmake-qt5 PREFIX=/usr
-  make
+  make -j$(nproc)
 }
 
 package() {
