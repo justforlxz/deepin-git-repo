@@ -21,30 +21,30 @@ groups=('deepin-git')
 provides=('deepin-file-manager')
 conflicts=('deepin-file-manager')
 replaces=('deepin-file-manager')
-source=("git://github.com/linuxdeepin/dde-file-manager"
+source=("$pkgname::git://github.com/linuxdeepin/dde-file-manager"
         "deepin-file-manager-qt5.15.patch")
 sha512sums=('SKIP'
             '2b58868fdaee9d42f8ba2029bcaa727c146c64b219faa52bd2df1c1483290e95a7cb6622227a24d35f7d7167061d264839bfeb47872d84519097b47af036daf7')
 
 pkgver() {
-    cd dde-file-manager
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare() {
-  cd dde-file-manager
+  cd $pkgname
   sed -i 's|systembusconf.path = /etc/dbus-1/system.d|systembusconf.path = /usr/share/dbus-1/system.d|' dde-file-manager-daemon/dde-file-manager-daemon.pro
 
   patch -p1 -i ../deepin-file-manager-qt5.15.patch # Fix build with Qt 5.15
 }
 
 build() {
-  cd dde-file-manager
+  cd $pkgname
   qmake-qt5 PREFIX=/usr
   make -j$(nproc)
 }
 
 package() {
-  cd dde-file-manager
+  cd $pkgname
   make INSTALL_ROOT="$pkgdir" install
 }
