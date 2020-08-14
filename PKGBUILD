@@ -24,7 +24,7 @@ pkgver() {
 prepare() {
   export GOPATH="$srcdir/build:/usr/share/gocode"
   mkdir -p "$srcdir"/build/src/github.com/linuxdeepin
-  cp -a "$srcdir"/go-dbus-factory "$srcdir"/build/src/github.com/linuxdeepin/go-dbus-factory
+  cp -a "$srcdir/$pkgname" "$srcdir"/build/src/github.com/linuxdeepin/go-dbus-factory
 }
 
 build() {
