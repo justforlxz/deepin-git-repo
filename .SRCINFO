@@ -25,7 +25,7 @@ pkgbase = startdde-git
 	conflicts = startdde
 	replaces = deepin-wm-switcher
 	replaces = startdde
-	source = git://github.com/linuxdeepin/startdde
+	source = startdde-git::git://github.com/linuxdeepin/startdde
 	sha512sums = SKIP
 
 pkgname = startdde-git

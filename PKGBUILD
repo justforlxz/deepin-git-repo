@@ -18,11 +18,11 @@ replaces=('deepin-wm-switcher' 'startdde')
 provides=('startdde')
 conflicts=('startdde')
 groups=('deepin-git')
-source=("git://github.com/linuxdeepin/startdde")
+source=("$pkgname::git://github.com/linuxdeepin/startdde")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd startdde
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
@@ -40,12 +40,12 @@ build() {
   export CGO_LDFLAGS="${LDFLAGS}"
   export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
 
-  cd startdde
+  cd $pkgname
   make
 }
 
 package() {
-  cd startdde
+  cd $pkgname
   make DESTDIR="$pkgdir" install
 
   # Fix env file permission
