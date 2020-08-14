@@ -13,7 +13,7 @@ pkgbase = deepin-qt5integration-git
 	provides = deepin-qt5integration
 	conflicts = deepin-qt5integration
 	replaces = deepin-qt5integration
-	source = git://github.com/linuxdeepin/qt5integration
+	source = deepin-qt5integration-git::git://github.com/linuxdeepin/qt5integration
 	sha512sums = SKIP
 
 pkgname = deepin-qt5integration-git

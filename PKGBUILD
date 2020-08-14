@@ -13,21 +13,21 @@ conflicts=('deepin-qt5integration')
 replaces=('deepin-qt5integration')
 provides=('deepin-qt5integration')
 groups=('deepin-git')
-source=("git://github.com/linuxdeepin/qt5integration")
+source=("$pkgname::git://github.com/linuxdeepin/qt5integration")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd qt5integration
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 build() {
-  cd qt5integration
+  cd $pkgname
   qmake-qt5 PREFIX=/usr
   make -j$(nproc)
 }
 
 package() {
-  cd qt5integration
+  cd $pkgname
   make INSTALL_ROOT="$pkgdir" install
 }
