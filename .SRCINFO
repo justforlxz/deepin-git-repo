@@ -13,7 +13,7 @@ pkgbase = deepin-qt-dbus-factory-git
 	provides = deepin-qt-dbus-factory
 	conflicts = deepin-qt-dbus-factory
 	replaces = deepin-qt-dbus-factory
-	source = git://github.com/linuxdeepin/dde-qt-dbus-factory.git
+	source = deepin-qt-dbus-factory-git::git://github.com/linuxdeepin/dde-qt-dbus-factory.git
 	sha512sums = SKIP
 
 pkgname = deepin-qt-dbus-factory-git

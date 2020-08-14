@@ -14,21 +14,21 @@ conflicts=('deepin-qt-dbus-factory')
 replaces=('deepin-qt-dbus-factory')
 provides=('deepin-qt-dbus-factory')
 groups=('deepin-git')
-source=("git://github.com/linuxdeepin/dde-qt-dbus-factory.git")
+source=("$pkgname::git://github.com/linuxdeepin/dde-qt-dbus-factory.git")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd dde-qt-dbus-factory
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 build() {
-  cd dde-qt-dbus-factory
+  cd $pkgname
   qmake-qt5 PREFIX=/usr
   make -j$(nproc)
 }
 
 package() {
-  cd dde-qt-dbus-factory
+  cd $pkgname
   make INSTALL_ROOT="$pkgdir" install
 }
