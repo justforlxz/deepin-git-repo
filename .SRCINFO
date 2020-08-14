@@ -17,7 +17,7 @@ pkgbase = deepin-qt5platform-plugins-git
 	provides = deepin-qt5platform-plugins
 	conflicts = deepin-qt5platform-plugins
 	replaces = deepin-qt5platform-plugins
-	source = git://github.com/linuxdeepin/qt5platform-plugins
+	source = deepin-qt5platform-plugins-git::git://github.com/linuxdeepin/qt5platform-plugins
 	sha512sums = SKIP
 
 pkgname = deepin-qt5platform-plugins-git

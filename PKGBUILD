@@ -13,16 +13,16 @@ replaces=('deepin-qt5platform-plugins')
 depends=('cairo' 'kwayland' 'qt5-wayland' 'qt5-x11extras')
 makedepends=('expac' 'qt5-xcb-private-headers' 'libglvnd' 'libxcb')
 groups=('deepin-git')
-source=("git://github.com/linuxdeepin/qt5platform-plugins")
+source=("$pkgname::git://github.com/linuxdeepin/qt5platform-plugins")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd qt5platform-plugins
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare() {
-  cd qt5platform-plugins
+  cd $pkgname
 
   rm -r xcb/libqt5xcbqpa-dev wayland/qtwayland-dev
   # Disable wayland for now: https://github.com/linuxdeepin/qt5platform-plugins/issues/47
@@ -36,12 +36,12 @@ prepare() {
 }
 
 build() {
-  cd qt5platform-plugins
+  cd $pkgname
   qmake-qt5 PREFIX=/usr
   make -j$(nproc)
 }
 
 package() {
-  cd qt5platform-plugins
+  cd $pkgname
   make INSTALL_ROOT="$pkgdir" install
 }
