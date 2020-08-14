@@ -20,7 +20,7 @@ pkgbase = deepin-launcher-git
 	provides = deepin-launcher
 	conflicts = deepin-launcher
 	replaces = deepin-launcher
-	source = git://github.com/linuxdeepin/dde-launcher.git
+	source = deepin-launcher-git::git://github.com/linuxdeepin/dde-launcher.git
 	sha512sums = SKIP
 
 pkgname = deepin-launcher-git
