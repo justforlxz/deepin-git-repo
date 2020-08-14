@@ -23,7 +23,7 @@ pkgbase = golang-deepin-lib-git
 	provides = golang-deepin-lib
 	conflicts = golang-deepin-lib
 	replaces = golang-deepin-lib
-	source = git://github.com/linuxdeepin/go-lib/
+	source = golang-deepin-lib-git::git://github.com/linuxdeepin/go-lib/
 	sha512sums = SKIP
 
 pkgname = golang-deepin-lib-git

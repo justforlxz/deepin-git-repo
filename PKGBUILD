@@ -16,16 +16,16 @@ replaces=('golang-deepin-lib')
 conflicts=('golang-deepin-lib')
 provides=('golang-deepin-lib')
 groups=('deepin-git')
-source=("git://github.com/linuxdeepin/go-lib/")
+source=("$pkgname::git://github.com/linuxdeepin/go-lib/")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd go-lib
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare() {
-  cd go-lib
+  cd $pkgname
   sed -i 's/int connect_timeout;/extern int connect_timeout;/' pulse/dde-pulse.h
 }
 
