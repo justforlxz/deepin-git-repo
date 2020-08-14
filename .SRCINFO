@@ -19,7 +19,7 @@ pkgbase = dtkwidget-git
 	provides = dtkwidget
 	conflicts = dtkwidget
 	replaces = dtkwidget
-	source = git://github.com/linuxdeepin/dtkwidget.git
+	source = dtkwidget-git::git://github.com/linuxdeepin/dtkwidget.git
 	sha512sums = SKIP
 
 pkgname = dtkwidget-git

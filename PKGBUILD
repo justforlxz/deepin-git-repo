@@ -14,26 +14,26 @@ replaces=('dtkwidget')
 conflicts=('dtkwidget')
 provides=('dtkwidget')
 groups=('deepin-git')
-source=("git://github.com/linuxdeepin/dtkwidget.git")
+source=("$pkgname::git://github.com/linuxdeepin/dtkwidget.git")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd dtkwidget
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare() {
-  cd dtkwidget
+  cd $pkgname
   sed -i '/#include <QPainter>/a #include <QPainterPath>' src/util/dwidgetutil.cpp
 }
 
 build() {
-  cd dtkwidget
+  cd $pkgname
   qmake-qt5 PREFIX=/usr
   make -j$(nproc)
 }
 
 package() {
-  cd dtkwidget
+  cd $pkgname
   make INSTALL_ROOT="$pkgdir" install
 }
