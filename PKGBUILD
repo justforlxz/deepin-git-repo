@@ -32,7 +32,7 @@ prepare() {
 check() {
   export GOPATH="$srcdir/build:/usr/share/gocode"
   mkdir -p "$srcdir"/build/src/pkg.deepin.io
-  cp -a "$srcdir"/go-lib "$srcdir"/build/src/pkg.deepin.io/lib
+  cp -a "$srcdir/$pkgname" "$srcdir"/build/src/pkg.deepin.io/lib
   cd "$srcdir"/build/src/pkg.deepin.io/lib
   # TODO: make packages for them
   go get github.com/cryptix/wav github.com/smartystreets/goconvey/convey github.com/mozillazg/go-pinyin gopkg.in/yaml.v3
@@ -45,7 +45,7 @@ check() {
 
 package() {
   mkdir -p "$pkgdir"/usr/share/gocode/src/pkg.deepin.io
-  cp -a "$srcdir"/go-lib "$pkgdir"/usr/share/gocode/src/pkg.deepin.io/lib
+  cp -a "$srcdir/$pkgname" "$pkgdir"/usr/share/gocode/src/pkg.deepin.io/lib
 
   rm -r "$pkgdir"/usr/share/gocode/src/pkg.deepin.io/lib/debian
 }
