@@ -13,27 +13,27 @@ conflicts=('deepin-network-utils')
 replaces=('deepin-network-utils')
 provides=('deepin-network-utils')
 groups=('deepin-git')
-source=("git://github.com/linuxdeepin/dde-network-utils.git")
+source=("$pkgname::git://github.com/linuxdeepin/dde-network-utils.git")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd dde-network-utils
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare() {
-  cd dde-network-utils
+  cd $pkgname
   # Use our own url instead of third-party commercial company's homepage
   sed -i '/www.baidu.com/i \    "https://www.archlinux.org/favicon.ico",' connectivitychecker.cpp
 }
 
 build(){
-  cd dde-network-utils
+  cd $pkgname
   qmake-qt5 PREFIX=/usr
   make
 }
 
 package() {
-  cd dde-network-utils
+  cd $pkgname
   make INSTALL_ROOT="$pkgdir" install
 }

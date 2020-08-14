@@ -12,7 +12,7 @@ pkgbase = deepin-network-utils-git
 	provides = deepin-network-utils
 	conflicts = deepin-network-utils
 	replaces = deepin-network-utils
-	source = git://github.com/linuxdeepin/dde-network-utils.git
+	source = deepin-network-utils-git::git://github.com/linuxdeepin/dde-network-utils.git
 	sha512sums = SKIP
 
 pkgname = deepin-network-utils-git
