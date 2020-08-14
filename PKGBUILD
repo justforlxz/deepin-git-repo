@@ -13,11 +13,11 @@ provides=('golang-github-linuxdeepin-go-dbus-factory')
 conflicts=('golang-github-linuxdeepin-go-dbus-factory')
 replaces=('golang-github-linuxdeepin-go-dbus-factory')
 groups=('deepin-git')
-source=('git://github.com/linuxdeepin/go-dbus-factory')
+source=("$pkgname::git://github.com/linuxdeepin/go-dbus-factory")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd go-dbus-factory
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
