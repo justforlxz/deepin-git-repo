@@ -16,7 +16,7 @@ pkgbase = dtkcore-git
 	provides = dtkcore
 	conflicts = dtkcore
 	replaces = dtkcore
-	source = git://github.com/linuxdeepin/dtkcore.git
+	source = dtkcore-git::git://github.com/linuxdeepin/dtkcore.git
 	sha512sums = SKIP
 
 pkgname = dtkcore-git
