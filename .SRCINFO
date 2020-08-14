@@ -20,7 +20,7 @@ pkgbase = deepin-session-shell-git
 	conflicts = deepin-session-ui<5
 	conflicts = deepin-session-shell
 	replaces = deepin-session-shell
-	source = git://github.com/linuxdeepin/dde-session-shell
+	source = deepin-session-shell-git::git://github.com/linuxdeepin/dde-session-shell
 	sha512sums = SKIP
 
 pkgname = deepin-session-shell-git
