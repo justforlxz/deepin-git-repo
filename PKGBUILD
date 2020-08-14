@@ -30,7 +30,7 @@ prepare() {
   export GOPATH="$srcdir/build:/usr/share/gocode"
   go get github.com/cryptix/wav golang.org/x/xerrors
 
-  sed -i 's/sbin/bin/' startdde/Makefile
+  sed -i 's/sbin/bin/' $pkgname/Makefile
 }
 
 build() {
