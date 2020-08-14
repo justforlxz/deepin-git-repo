@@ -16,7 +16,7 @@ pkgbase = deepin-polkit-agent-git
 	provides = deepin-polkit-agent
 	conflicts = deepin-polkit-agent
 	replaces = deepin-polkit-agent
-	source = $pkgname::git://github.com/linuxdeepin/dde-polkit-agent
+	source = deepin-polkit-agent-git::git://github.com/linuxdeepin/dde-polkit-agent
 	sha512sums = SKIP
 
 pkgname = deepin-polkit-agent-git

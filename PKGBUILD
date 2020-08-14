@@ -13,7 +13,7 @@ conflicts=('deepin-polkit-agent')
 replaces=('deepin-polkit-agent')
 provides=('deepin-polkit-agent')
 groups=('deepin-git')
-source=('$pkgname::git://github.com/linuxdeepin/dde-polkit-agent')
+source=("$pkgname::git://github.com/linuxdeepin/dde-polkit-agent")
 sha512sums=('SKIP')
 
 pkgver() {
