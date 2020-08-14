@@ -25,7 +25,7 @@ pkgver() {
 check() {
   export GOPATH="$srcdir/build:/usr/share/gocode"
   mkdir -p "$srcdir"/build/src/github.com/linuxdeepin
-  cp -a "$srcdir"/go-x11-client "$srcdir"/build/src/github.com/linuxdeepin/go-x11-client
+  cp -a "$srcdir/$pkgname" "$srcdir"/build/src/github.com/linuxdeepin/go-x11-client
   cd "$srcdir"/build/src/github.com/linuxdeepin/go-x11-client
   go get gopkg.in/yaml.v3
   xvfb-run go test -v $(go list ./...)
@@ -33,7 +33,7 @@ check() {
 
 package() {
   mkdir -p "$pkgdir"/usr/share/gocode/src/github.com/linuxdeepin
-  cp -a "$srcdir"/go-x11-client "$pkgdir"/usr/share/gocode/src/github.com/linuxdeepin/go-x11-client
+  cp -a "$srcdir/$pkgname" "$pkgdir"/usr/share/gocode/src/github.com/linuxdeepin/go-x11-client
 
   rm -r "$pkgdir"/usr/share/gocode/src/github.com/linuxdeepin/go-x11-client/debian
 }
