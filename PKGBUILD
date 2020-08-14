@@ -15,21 +15,21 @@ conflicts=('deepin-dock')
 replaces=('deepin-dock')
 provides=('deepin-dock')
 groups=('deepin-git')
-source=("git://github.com/justforlxz/dde-dock")
+source=("$pkgname::git://github.com/justforlxz/dde-dock")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd dde-dock
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 build() {
-  cd dde-dock
+  cd $pkgname
   cmake . -GNinja -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib -DDOCK_TRAY_USE_NATIVE_POPUP=YES
   ninja
 }
 
 package() {
-  cd dde-dock
+  cd $pkgname
   DESTDIR="$pkgdir" ninja install
 }
