@@ -63,7 +63,7 @@ check() {
   cd "$srcdir"/build/src/pkg.deepin.io/gir
   go test -v $(go list ./...)
 
-  cd "$srcdir"/go-gir-generator
+  cd "$srcdir/$pkgname"
   go run test/memory.go
 }
 
