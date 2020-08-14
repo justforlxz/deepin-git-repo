@@ -14,11 +14,11 @@ groups=('deepin-git')
 depends=('go' 'golang-deepin-lib-git' 'golang-golang-x-text')
 makedepends=('git')
 checkdepends=('xorg-server-xvfb' 'golang-github-stretchr-testify' 'golang-gopkg-check.v1' 'golang-gopkg-yaml.v2' 'git')
-source=('git://github.com/linuxdeepin/go-x11-client')
+source=("$pkgname::git://github.com/linuxdeepin/go-x11-client")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd go-x11-client
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
