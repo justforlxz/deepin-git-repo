@@ -13,22 +13,22 @@ conflicts=('deepin-polkit-agent-ext-gnomekeyring')
 replaces=('deepin-polkit-agent-ext-gnomekeyring')
 provides=('deepin-polkit-agent-ext-gnomekeyring')
 groups=('deepin-git')
-source=("git://github.com/linuxdeepin/dpa-ext-gnomekeyring/")
+source=("$pkgname::git://github.com/linuxdeepin/dpa-ext-gnomekeyring/")
 sha512sums=('SKIP')
 
 pkgver() {
-    cd dpa-ext-gnomekeyring
+    cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 build() {
-  cd dpa-ext-gnomekeyring
+  cd $pkgname
 
   qmake-qt5
   make
 }
 
 package() {
-  cd dpa-ext-gnomekeyring
+  cd $pkgname
   make INSTALL_ROOT="$pkgdir" install
 }
