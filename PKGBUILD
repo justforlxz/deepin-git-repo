@@ -25,10 +25,10 @@ provides=('deepin-daemon')
 groups=('deepin-git')
 install="$pkgname.install"
 source=("$pkgname::git://github.com/linuxdeepin/dde-daemon"
-        dde-daemon_5.9.4.2.diff
+        dde-daemon.patch
         'deepin-daemon.sysusers')
 sha512sums=('SKIP'
-            '188bb74fc4deddd2d9cbc210ec487b45664178524294d9a98e47cd4c8a70e369fd3441697bc50b696a975cfbbbfa16666d1798b1ae25469abee50eb84e4bef27'
+            'SKIP'
             '808c02d4fec4cbbb01119bbb10499090199e738b7dd72c28a57dde098eef6132723f3434c151f79e21d9f788c7f7bae8046573ac93ba917afe0e803fbffa6d5a')
 
 pkgver() {
@@ -39,7 +39,7 @@ pkgver() {
 prepare() {
   cd $pkgname
   mkdir build
-  patch -p1 -i ../dde-daemon_5.9.4.2.diff
+  patch -p1 -i ../dde-daemon.patch
 
   export GOPATH="$srcdir/build:/usr/share/gocode"
 

@@ -1,9 +1,9 @@
 diff --git a/misc/dde-daemon/gesture.json b/misc/dde-daemon/gesture.json
-index 73a3d7ee..fbcc8fd8 100644
+index e7ccf8d1..baedbee7 100644
 --- a/misc/dde-daemon/gesture.json
 +++ b/misc/dde-daemon/gesture.json
-@@ -53,15 +53,6 @@
-             "Action": "ShowWindow"
+@@ -35,15 +35,6 @@
+             "Action": "SplitWindowRight"
          }
      },
 -    {
@@ -19,10 +19,10 @@ index 73a3d7ee..fbcc8fd8 100644
          "Name": "swipe",
          "Direction": "up",
 diff --git a/system/gesture/core.c b/system/gesture/core.c
-index f953cc1c..4a49749e 100644
+index 45d4be9f..9af04094 100644
 --- a/system/gesture/core.c
 +++ b/system/gesture/core.c
-@@ -305,7 +305,7 @@ handle_gesture_events(struct libinput_event *ev, int type)
+@@ -354,7 +354,7 @@ handle_gesture_events(struct libinput_event *ev, int type)
          }
          raw_event_reset(raw);
          break;
@@ -31,7 +31,7 @@ index f953cc1c..4a49749e 100644
          break;
      case LIBINPUT_EVENT_GESTURE_TAP_END:
          if (libinput_event_gesture_get_cancelled(gesture)) {
-@@ -314,7 +314,7 @@ handle_gesture_events(struct libinput_event *ev, int type)
+@@ -363,7 +363,7 @@ handle_gesture_events(struct libinput_event *ev, int type)
          raw->fingers = libinput_event_gesture_get_finger_count(gesture);
          g_debug("[Tap] fingers: %d", raw->fingers);
          handleGestureEvent(GESTURE_TYPE_TAP, GESTURE_DIRECTION_NONE, raw->fingers);
@@ -40,7 +40,7 @@ index f953cc1c..4a49749e 100644
      }
  }
  
-@@ -433,9 +433,9 @@ handle_events(struct libinput *li)
+@@ -493,9 +493,9 @@ handle_events(struct libinput *li, struct movement *m)
          case LIBINPUT_EVENT_GESTURE_SWIPE_BEGIN:
          case LIBINPUT_EVENT_GESTURE_SWIPE_UPDATE:
          case LIBINPUT_EVENT_GESTURE_SWIPE_END:
