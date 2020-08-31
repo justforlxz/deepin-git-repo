@@ -44,6 +44,10 @@ check() {
   # passwd: test needs to access /etc/passwd
   # group & timer & log & dbus: build failed
   # shell: TestEncode failed
+  go get -v github.com/fsnotify/fsnotify
+  go get -v github.com/godbus/dbus
+  go get -v github.com/godbus/dbus/introspect
+  go get -v github.com/godbus/dbus/prop
   go test -v $(go list ./... | grep -v -e lib/pulse -e lib/users/passwd -e lib/users/group -e lib/timer -e lib/log -e lib/dbus -e lib/shell)
 }
 
