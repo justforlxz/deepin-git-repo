@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=golang-deepin-lib-git
-pkgver=5.5.0.1.r4.g67f7719
+pkgver=5.5.0.6.r1.gf3021d1
 pkgrel=1
 pkgdesc='A library containing many useful go routines for things such as glib, gettext, archive, graphic,etc.'
 arch=('any')
@@ -27,6 +27,10 @@ pkgver() {
 prepare() {
   cd $pkgname
   sed -i 's/int connect_timeout;/extern int connect_timeout;/' pulse/dde-pulse.h
+  go get -v github.com/fsnotify/fsnotify
+  go get -v github.com/godbus/dbus
+  go get -v github.com/godbus/dbus/introspect
+  go get -v github.com/godbus/dbus/prop
 }
 
 check() {
