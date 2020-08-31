@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=startdde-git
-pkgver=5.5.0.8.r4.g1c427e6
+pkgver=5.5.0.18.r0.g26b177a
 pkgrel=1
 pkgdesc="starter of deepin desktop environment"
 arch=('x86_64')
@@ -28,7 +28,12 @@ pkgver() {
 
 prepare() {
   export GOPATH="$srcdir/build:/usr/share/gocode"
-  go get github.com/cryptix/wav golang.org/x/xerrors
+  go get -v github.com/cryptix/wav
+  go get -v golang.org/x/xerrors
+  go get -v github.com/fsnotify/fsnotify
+  go get -v github.com/godbus/dbus
+  go get -v github.com/godbus/dbus/introspect
+  go get -v github.com/godbus/dbus/prop
 
   sed -i 's/sbin/bin/' $pkgname/Makefile
 }
