@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=golang-github-linuxdeepin-go-x11-client-git
-pkgver=0.6.0.r1.gace6660
+pkgver=0.6.0.r2.g2874f29
 pkgrel=1
 pkgdesc='X11 protocol go language binding'
 arch=('any')
@@ -12,7 +12,7 @@ replaces=('golang-github-linuxdeepin-go-x11-client')
 provides=('golang-github-linuxdeepin-go-x11-client')
 groups=('deepin-git')
 depends=('go' 'golang-deepin-lib-git' 'golang-golang-x-text')
-makedepends=('git')
+makedepends=('git' 'xorg-server-xvfb' 'golang-github-stretchr-testify' 'golang-gopkg-check.v1' 'golang-gopkg-yaml.v2')
 checkdepends=('xorg-server-xvfb' 'golang-github-stretchr-testify' 'golang-gopkg-check.v1' 'golang-gopkg-yaml.v2' 'git')
 source=("$pkgname::git://github.com/linuxdeepin/go-x11-client")
 sha512sums=('SKIP')
