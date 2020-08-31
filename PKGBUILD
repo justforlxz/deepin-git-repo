@@ -1,8 +1,8 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-api-git
-pkgver=5.3.0.3.r1.ga8e8112
-pkgrel=2
+pkgver=5.3.0.10.r0.g96a6dfa
+pkgrel=1
 pkgdesc='Golang bindings for dde-daemon'
 arch=('x86_64')
 url="https://github.com/linuxdeepin/dde-api"
@@ -40,8 +40,11 @@ prepare() {
 
   # golang-deepin-lib's dependency, remove when go packaging resumes
   go get github.com/cryptix/wav
-
   go get github.com/disintegration/imaging github.com/fogleman/gg github.com/mattn/go-sqlite3 github.com/gosexy/gettext github.com/rickb777/date
+  go get -v github.com/fsnotify/fsnotify
+  go get -v github.com/godbus/dbus/
+  go get -v github.com/godbus/dbus/introspect
+  go get -v github.com/godbus/dbus/prop
 }
 
 build(){
