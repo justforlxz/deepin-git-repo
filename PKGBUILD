@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-daemon-git
-pkgver=5.11.0.43.r0.g2df39d1d
+pkgver=5.11.0.46.r0.gaeb1f124
 pkgrel=1
 pkgdesc='Daemon handling the DDE session settings'
 arch=('x86_64')
@@ -47,7 +47,7 @@ prepare() {
   go get -v github.com/cryptix/wav
 
   go get -v github.com/axgle/mahonia github.com/msteinert/pam github.com/gosexy/gettext github.com/rickb777/date \
-         gorm.io/gorm github.com/kelvins/sunrisesunset github.com/mozillazg/go-pinyin github.com/teambition/rrule-go \
+         github.com/jinzhu/gorm github.com/kelvins/sunrisesunset github.com/mozillazg/go-pinyin github.com/teambition/rrule-go \
          golang.org/x/xerrors github.com/mattn/go-sqlite3 github.com/fsnotify/fsnotify
   go get -v github.com/godbus/dbus
   go get -v github.com/godbus/dbus/introspect
