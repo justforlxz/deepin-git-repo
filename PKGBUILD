@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-qt5platform-plugins-git
-pkgver=5.0.13.r31.gad37ce2
+pkgver=5.0.16.r0.g4375886
 pkgrel=1
 pkgdesc='Qt platform plugins for DDE'
 arch=('x86_64')
@@ -11,7 +11,7 @@ provides=('deepin-qt5platform-plugins')
 conflicts=('deepin-qt5platform-plugins')
 replaces=('deepin-qt5platform-plugins')
 depends=('cairo' 'kwayland' 'qt5-wayland' 'qt5-x11extras')
-makedepends=('expac' 'qt5-xcb-private-headers' 'libglvnd' 'libxcb')
+makedepends=('git' 'expac' 'qt5-xcb-private-headers' 'libglvnd' 'libxcb')
 groups=('deepin-git')
 source=("$pkgname::git://github.com/linuxdeepin/qt5platform-plugins")
 sha512sums=('SKIP')

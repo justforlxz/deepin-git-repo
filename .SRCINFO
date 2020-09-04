@@ -1,11 +1,12 @@
 pkgbase = deepin-qt5platform-plugins-git
 	pkgdesc = Qt platform plugins for DDE
-	pkgver = 5.0.13.r31.gad37ce2
+	pkgver = 5.0.16.r0.g4375886
 	pkgrel = 1
 	url = https://github.com/linuxdeepin/qt5platform-plugins
 	arch = x86_64
 	groups = deepin-git
 	license = GPL3
+	makedepends = git
 	makedepends = expac
 	makedepends = qt5-xcb-private-headers
 	makedepends = libglvnd
