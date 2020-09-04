@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-file-manager-git
-pkgver=5.1.0.26.r213.g03f26b70
+pkgver=5.2.0.9.r38.g5602a7942
 pkgrel=1
 pkgdesc='Deepin File Manager'
 arch=('x86_64')
@@ -24,7 +24,7 @@ replaces=('deepin-file-manager')
 source=("$pkgname::git://github.com/linuxdeepin/dde-file-manager"
         "deepin-file-manager-qt5.15.patch")
 sha512sums=('SKIP'
-            '2b58868fdaee9d42f8ba2029bcaa727c146c64b219faa52bd2df1c1483290e95a7cb6622227a24d35f7d7167061d264839bfeb47872d84519097b47af036daf7')
+            '0c38761b7a44dc581d7d4fedc2c51cf702769ec43a325384f13ce427cf2dccc8af4b59e82f4bd567449073926f4a7ad433147ea01db0ad8ab75eb46f7150a3eb')
 
 pkgver() {
     cd $pkgname
