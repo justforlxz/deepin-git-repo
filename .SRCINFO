@@ -23,6 +23,8 @@ pkgbase = deepin-dock-git
 	conflicts = deepin-dock
 	replaces = deepin-dock
 	source = deepin-dock-git::git://github.com/linuxdeepin/dde-dock
+	source = dde-dock.patch
+	sha512sums = SKIP
 	sha512sums = SKIP
 
 pkgname = deepin-dock-git
