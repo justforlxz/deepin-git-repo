@@ -2,7 +2,7 @@
 # Contributor: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-dock-git
-pkgver=5.1.0.11.r337.gb8d7f24e
+pkgver=5.1.0.11.r353.g0a4c6101
 pkgrel=1
 pkgdesc='Deepin desktop-environment - dock module'
 arch=('x86_64')
@@ -10,7 +10,7 @@ url="https://github.com/linuxdeepin/dde-dock"
 license=('GPL3')
 depends=('qt5-svg' 'deepin-daemon-git' 'deepin-qt5integration-git'
          'deepin-qt-dbus-factory-git' 'deepin-network-utils-git' 'libdbusmenu-qt5')
-makedepends=('git' 'cmake' 'ninja' 'qt5-tools')
+makedepends=('git' 'cmake' 'ninja' 'qt5-tools' 'deepin-qt5integration-git' 'deepin-qt-dbus-factory' 'deepin-network-utils-git')
 conflicts=('deepin-dock')
 replaces=('deepin-dock')
 provides=('deepin-dock')
