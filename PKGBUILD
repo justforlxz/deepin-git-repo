@@ -15,18 +15,12 @@ conflicts=('deepin-dock')
 replaces=('deepin-dock')
 provides=('deepin-dock')
 groups=('deepin-git')
-source=("$pkgname::git://github.com/linuxdeepin/dde-dock"
-        "dde-dock.patch")
-sha512sums=('SKIP' 'SKIP')
+source=("$pkgname::git://github.com/linuxdeepin/dde-dock")
+sha512sums=('SKIP')
 
 pkgver() {
     cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
-}
-
-prepare() {
-  cd $pkgname
-  patch -p1 -i ../dde-dock.patch
 }
 
 build() {
