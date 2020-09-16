@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-polkit-agent-ext-gnomekeyring-git
-pkgver=5.0.2.r0.g33f79c4
+pkgver=5.0.4.r0.gc437a27
 pkgrel=1
 pkgdesc="GNOME keyring extension for dde-polkit-agent"
 arch=('x86_64')
