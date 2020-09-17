@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-session-shell-git
-pkgver=5.3.0.14.r5.gcba4c06
+pkgver=5.3.0.15.r1.g12b882c
 pkgrel=1
 pkgdesc='Deepin desktop-environment - session-shell module'
 arch=('x86_64')
