@@ -17,7 +17,6 @@ pkgbase = golang-github-linuxdeepin-go-x11-client-git
 	makedepends = golang-gopkg-check.v1
 	makedepends = golang-gopkg-yaml.v2
 	depends = go
-	depends = golang-deepin-lib-git
 	depends = golang-golang-x-text
 	provides = golang-github-linuxdeepin-go-x11-client
 	conflicts = golang-github-linuxdeepin-go-x11-client

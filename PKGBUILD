@@ -11,7 +11,7 @@ conflicts=('golang-github-linuxdeepin-go-x11-client')
 replaces=('golang-github-linuxdeepin-go-x11-client')
 provides=('golang-github-linuxdeepin-go-x11-client')
 groups=('deepin-git')
-depends=('go' 'golang-deepin-lib-git' 'golang-golang-x-text')
+depends=('go' 'golang-golang-x-text')
 makedepends=('git' 'xorg-server-xvfb' 'golang-github-stretchr-testify' 'golang-gopkg-check.v1' 'golang-gopkg-yaml.v2')
 checkdepends=('xorg-server-xvfb' 'golang-github-stretchr-testify' 'golang-gopkg-check.v1' 'golang-gopkg-yaml.v2' 'git')
 source=("$pkgname::git://github.com/linuxdeepin/go-x11-client")
@@ -20,6 +20,11 @@ sha512sums=('SKIP')
 pkgver() {
     cd $pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+prepare() {
+  cd $pkgname
+  rm -rf tools
 }
 
 check() {
