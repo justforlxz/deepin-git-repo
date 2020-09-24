@@ -1,6 +1,6 @@
 pkgbase = deepin-control-center-git
 	pkgdesc = New control center for linux deepin
-	pkgver = 5.3.0.29.r3.g1414ba58e
+	pkgver = 5.3.0.34.r4.ga107f38c6
 	pkgrel = 1
 	url = https://github.com/linuxdeepin/dde-control-center
 	arch = x86_64
