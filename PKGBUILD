@@ -2,7 +2,7 @@
 # Contributor: Dingyuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-launcher-git
-pkgver=5.3.0.15.r4.g0944d03a
+pkgver=5.3.0.16.r1.g9fc1c663
 pkgrel=1
 pkgdesc='Deepin desktop-environment - Launcher module'
 arch=('x86_64')
