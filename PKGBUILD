@@ -1,7 +1,7 @@
 # Maintainer: Haruyuki lxz <lxz@ilxz.me>
 
 pkgname=dtkwidget-git
-pkgver=5.2.2.16.r0.g36d3e769
+pkgver=5.2.2.16.r3.gb138cc30
 pkgrel=1
 pkgdesc='Deepin graphical user interface library'
 arch=('x86_64')
