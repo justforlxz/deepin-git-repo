@@ -6,6 +6,7 @@ pkgbase = deepin-session-ui-git
 	arch = x86_64
 	groups = deepin-git
 	license = GPL3
+	makedepends = git
 	makedepends = deepin-gettext-tools-git
 	makedepends = qt5-tools
 	depends = gsettings-qt
