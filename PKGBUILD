@@ -2,7 +2,7 @@
 # Contributor: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-dock-git
-pkgver=5.3.0.25.r0.g5f2f70f4
+pkgver=5.3.0.26.r0.g240cf938
 pkgrel=1
 pkgdesc='Deepin desktop-environment - dock module'
 arch=('x86_64')
