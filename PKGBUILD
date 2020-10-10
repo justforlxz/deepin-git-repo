@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz>
 
 pkgname=deepin-session-ui-git
-pkgver=5.3.0.17.r0.geca92514
+pkgver=5.3.0.18.r0.ga32c9c33
 pkgrel=1
 pkgdesc='Deepin desktop-environment - Session UI module'
 arch=('x86_64')
