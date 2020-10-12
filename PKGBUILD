@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-desktop-schemas-git
-pkgver=5.8.0.20.r8.gbea286c
+pkgver=5.8.0.20.r9.g260885a
 pkgrel=1
 pkgdesc='GSettings deepin desktop-wide schemas'
 arch=('any')
