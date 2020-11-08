@@ -20,10 +20,8 @@ optdepends=('deepin-manual: for help menual'
 groups=('deepin-git')
 provides=('deepin-file-manager')
 conflicts=('deepin-file-manager')
-source=("$pkgname::git://github.com/linuxdeepin/dde-file-manager"
-        "deepin-file-manager-qt5.15.patch")
-sha512sums=('SKIP'
-            '0c38761b7a44dc581d7d4fedc2c51cf702769ec43a325384f13ce427cf2dccc8af4b59e82f4bd567449073926f4a7ad433147ea01db0ad8ab75eb46f7150a3eb')
+source=("$pkgname::git://github.com/linuxdeepin/dde-file-manager")
+sha512sums=('SKIP')
 
 pkgver() {
     cd $pkgname
@@ -31,10 +29,11 @@ pkgver() {
 }
 
 prepare() {
-  cd ${pkgname}
-  sed -i 's|systembusconf.path = /etc/dbus-1/system.d|systembusconf.path = /usr/share/dbus-1/system.d|' dde-file-manager-daemon/dde-file-manager-daemon.pro
-
-  patch -p1 -i ../deepin-file-manager-qt5.15.patch # Fix build with Qt 5.15
+    cd ${pkgname}
+    sed -i '/#include <QException>/a #include <QPainterPath>' dialogs/dfmtaskwidget.cpp
+    sed -i '/#include <QTimer>/a #include <QPainterPath>' dde-file-manager-lib/interfaces/dfmglobal.cpp
+    sed -i '/#include <QPainter>/a #include <QPainterPath>' dde-file-manager-lib/interfaces/{dlistitemdelegate,dfmstyleditemdelegate,diconitemdelegate}.cpp dde-file-manager-lib/dialogs/openwithdialog.cpp
+    sed -i 's|systembusconf.path = /etc/dbus-1/system.d|systembusconf.path = /usr/share/dbus-1/system.d|' dde-file-manager-daemon/dde-file-manager-daemon.pro
 }
 
 build() {
