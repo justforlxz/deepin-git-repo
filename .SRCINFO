@@ -1,12 +1,13 @@
 pkgbase = deepin-file-manager-git
 	pkgdesc = Deepin File Manager
-	pkgver = 5.2.0.37.r0.ga6fde9dd4
+	pkgver = 5.2.0.73.r82.g455f649ad
 	pkgrel = 1
 	url = https://github.com/linuxdeepin/dde-file-manager
 	arch = x86_64
 	groups = deepin-git
 	license = GPL3
 	makedepends = git
+	makedepends = deepin-movie
 	makedepends = lucene++
 	makedepends = jemalloc
 	makedepends = kcodecs
