@@ -41,7 +41,6 @@ pkgbase = deepin-file-manager-git
 	optdepends = deepin-compressor: for compress/decompress
 	provides = deepin-file-manager
 	conflicts = deepin-file-manager
-	replaces = deepin-file-manager
 	source = deepin-file-manager-git::git://github.com/linuxdeepin/dde-file-manager
 	source = deepin-file-manager-qt5.15.patch
 	sha512sums = SKIP

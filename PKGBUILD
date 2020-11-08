@@ -20,7 +20,6 @@ optdepends=('deepin-manual: for help menual'
 groups=('deepin-git')
 provides=('deepin-file-manager')
 conflicts=('deepin-file-manager')
-replaces=('deepin-file-manager')
 source=("$pkgname::git://github.com/linuxdeepin/dde-file-manager"
         "deepin-file-manager-qt5.15.patch")
 sha512sums=('SKIP'
