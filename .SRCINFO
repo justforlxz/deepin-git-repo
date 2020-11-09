@@ -13,6 +13,7 @@ pkgbase = deepin-launcher-git
 	makedepends = qt5-base
 	makedepends = qt5-x11extras
 	makedepends = qt5-svg
+	makedepends = dtkwidget-git
 	depends = gsettings-qt
 	depends = qt5-svg
 	depends = qt5-x11extras
