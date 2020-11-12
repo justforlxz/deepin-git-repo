@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-api-git
-pkgver=5.3.0.12.r1.g112a7ef
+pkgver=5.3.0.13.r3.g5eedc9b
 pkgrel=1
 pkgdesc='Golang bindings for dde-daemon'
 arch=('x86_64')
@@ -12,7 +12,7 @@ license=('GPL3')
 # fontconfig: fc-match used in adjust-grub-theme
 # librsvg: rsvg-convert used in adjust-grub-theme
 # util-linux: rfkill used in device
-depends=('alsa-utils' 'bc' 'fontconfig' 'glib2' 'gdk-pixbuf2' 'gtk3' 'libcanberra-pulse' 'librsvg'
+depends=('alsa-utils' 'bc' 'fontconfig' 'glib2' 'gdk-pixbuf2' 'gdk-pixbuf-xlib' 'gtk3' 'libcanberra-pulse' 'librsvg'
          'libxi' 'libxfixes' 'poppler-glib' 'util-linux' 'xcur2png' 'blur-effect')
 makedepends=('git' 'deepin-gettext-tools-git' 'golang-deepin-gir-git' 'golang-deepin-lib-git'
              'golang-github-linuxdeepin-go-dbus-factory-git' 'golang-github-linuxdeepin-go-x11-client-git'
