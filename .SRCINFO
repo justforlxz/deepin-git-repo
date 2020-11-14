@@ -12,6 +12,7 @@ pkgbase = golang-deepin-gir-git
 	makedepends = gobject-introspection
 	depends = gtk3
 	depends = libgudev
+	depends = gdk-pixbuf-xlib
 	provides = golang-deepin-gir
 	conflicts = golang-deepin-gir
 	source = golang-deepin-gir-git::git://github.com/linuxdeepin/go-gir-generator
