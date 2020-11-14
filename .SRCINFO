@@ -13,6 +13,7 @@ pkgbase = golang-deepin-lib-git
 	depends = dbus
 	depends = libpulse
 	depends = gdk-pixbuf2
+	depends = gdk-pixbuf-xlib
 	depends = mobile-broadband-provider-info
 	depends = libx11
 	depends = golang-gopkg-alecthomas-kingpin.v2
