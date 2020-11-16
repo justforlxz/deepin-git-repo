@@ -21,7 +21,6 @@ optdepends=('redshift: automatic color temperature support'
             'network-manager-sstp: for SSTP support')
 # Not packaged: network-manager-l2tp
 conflicts=('deepin-control-center')
-replaces=('deepin-control-center')
 provides=('deepin-control-center')
 groups=('deepin-git')
 source=("$pkgname::git://github.com/linuxdeepin/dde-control-center/"
