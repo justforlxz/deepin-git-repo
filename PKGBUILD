@@ -20,7 +20,6 @@ optdepends=('networkmanager: for network management support'
             'iw: for miracast module'
             'proxychains-ng: for proxy configuration module')
 conflicts=('deepin-daemon')
-replaces=('deepin-daemon')
 provides=('deepin-daemon')
 groups=('deepin-git')
 install="$pkgname.install"
