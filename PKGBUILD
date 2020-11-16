@@ -18,7 +18,6 @@ makedepends=('git' 'deepin-gettext-tools-git' 'golang-deepin-gir-git' 'golang-de
              'golang-github-linuxdeepin-go-dbus-factory-git' 'golang-github-linuxdeepin-go-x11-client-git'
              'golang-github-nfnt-resize' 'bzr' 'go-pie')
 provides=('deepin-api')
-replaces=('deepin-api')
 conflicts=('deepin-api')
 groups=('deepin-git')
 install=deepin-api.install
