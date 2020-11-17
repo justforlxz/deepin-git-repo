@@ -11,10 +11,8 @@ url="https://github.com/linuxdeepin/deepin-anything"
 license=('GPL3')
 makedepends=('git' 'dtkcore-git' 'udisks2-qt5')
 source=("$pkgbase::git://github.com/linuxdeepin/deepin-anything"
-        '0001-linux-5.6.patch'
         deepin-anything-server.sysusers)
 sha512sums=('SKIP'
-            '5ddbd2d968bc5b01dbc99648cec81ea072675d7fe7198835649d5b581997945d32bd842dd7ebf60185aa84722b94575ac7aeb5e4616945e22fae53272907305b'
             '0ff6a6de1fbfb0c33eaac511b989da321a9e43ece92708af88aee34ad1a05e55572713b1290bc2705d70b91dc7bec4fb4abd3dc664a0abe01de27d88bd9e9c85')
 
 pkgver() {
@@ -24,7 +22,6 @@ pkgver() {
 
 prepare() {
   cd $pkgbase
-  patch -Np1 < ../0001-linux-5.6.patch
   sed -i 's|^systemd_service.path.*|systemd_service.path = /usr/lib/systemd/system|' server/monitor/src/src.pro server/tool/tool.pro
 }
 
