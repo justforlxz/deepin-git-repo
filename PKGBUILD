@@ -1,7 +1,7 @@
-# Maintainer: Haruyuki lxz <lxz@ilxz.me>
+# Maintainer: justforlxz <justforlxz@gmail.com>
 
 pkgname=dtkcore-git
-pkgver=5.2.2.15.r1.gc864b8f
+pkgver=5.2.2.16.r2.ge7e7a99
 pkgrel=1
 pkgdesc='DTK core modules'
 arch=('x86_64')
