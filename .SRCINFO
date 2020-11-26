@@ -1,6 +1,6 @@
 pkgbase = dtkwidget-git
 	pkgdesc = Deepin graphical user interface library
-	pkgver = 5.2.2.18.r0.g626b3e94
+	pkgver = 5.4.1.r4.gaffb254c
 	pkgrel = 1
 	url = https://github.com/linuxdeepin/dtkwidget
 	arch = x86_64
@@ -8,7 +8,6 @@ pkgbase = dtkwidget-git
 	license = LGPL3
 	makedepends = git
 	makedepends = qt5-tools
-	makedepends = qt5-base
 	depends = deepin-qt-dbus-factory-git
 	depends = dtkcore-git
 	depends = dtkgui-git
