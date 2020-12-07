@@ -1,7 +1,7 @@
 # Maintainer: DingYuan Zhang <justforlxz@gmail.com>
 
 pkgname=deepin-network-utils-git
-pkgver=5.3.0.5.r0.g427534b
+pkgver=5.3.0.5.r3.g35a3327
 pkgrel=1
 pkgdesc='DDE network utils'
 arch=('x86_64')
@@ -10,7 +10,6 @@ license=('GPL3')
 depends=('deepin-qt-dbus-factory-git' 'gsettings-qt')
 makedepends=('git' 'qt5-tools' 'gsettings-qt')
 conflicts=('deepin-network-utils')
-replaces=('deepin-network-utils')
 provides=('deepin-network-utils')
 groups=('deepin-git')
 source=("$pkgname::git://github.com/linuxdeepin/dde-network-utils.git")
