@@ -20,6 +20,11 @@ pkgver() {
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
+prepare() {
+    cd $pkgname
+    sed -i 's/gio-qt//g' tst_dde-network-utils/tst_dde-network-utils.pro
+}
+
 build(){
   cd $pkgname
   qmake-qt5 PREFIX=/usr
