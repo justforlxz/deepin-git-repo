@@ -20,12 +20,6 @@ pkgver() {
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
-prepare() {
-  cd $pkgname
-  # Use our own url instead of third-party commercial company's homepage
-  sed -i '/www.baidu.com/i \    "https://www.archlinux.org/favicon.ico",' connectivitychecker.cpp
-}
-
 build(){
   cd $pkgname
   qmake-qt5 PREFIX=/usr
