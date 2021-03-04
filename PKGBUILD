@@ -27,6 +27,7 @@ pkgver() {
 
 prepare() {
   export GOPATH="$srcdir/build:/usr/share/gocode"
+  export GO111MODULE=off
   go get -v github.com/cryptix/wav
   go get -v golang.org/x/xerrors
   go get -v github.com/fsnotify/fsnotify
