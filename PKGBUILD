@@ -41,7 +41,7 @@ prepare() {
   patch -p1 -i ../dde-daemon.patch
 
   export GOPATH="$srcdir/build:/usr/share/gocode"
-
+  export GO111MODULE=off
   # golang-deepin-lib's dependency, remove when go packaging resumes
   go get -v github.com/cryptix/wav
 
