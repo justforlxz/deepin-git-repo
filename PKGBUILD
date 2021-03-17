@@ -44,7 +44,7 @@ prepare() {
 build() {
   export GOPATH="$srcdir/build:/usr/share/gocode"
   export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw"
-
+  export GO111MODULE=off
   cd $pkgname
   rm -r gogtk-demo
   make
